@@ -76,18 +76,42 @@ document.getElementById("answer4").innerHTML = woodRange;
 //// Answer 5
 //
 //
-var woodFilter = items.filter(function(el, idx, array){
-  return el.materials.indexOf("wood") !== -1;
-});
-var woodMap = woodFilter.map(function(el, idx, array){
-  return {
-    title: el.title,
-    materials: el.materials
-  };
-});
-var woodRange = "";
-woodMap.forEach(function(el,idx, array){
-  woodRange += " item: " + el.title + "<br />   " + " material: " + el.materials + "<br /><br />";
+var materialFilter = items.filter(function(el, idx, array){
+  return el.materials.length >= 8;
 });
 
-document.getElementById("answer4").innerHTML = woodRange;
+var materialMap = materialFilter.map(function(el, idx, array){
+  return {
+    title: el.title,
+    materialNumber: el.materials.length,
+    material: el.materials
+  };
+});
+var materialRange = "";
+materialMap.forEach(function(el,idx, array){
+  materialRange += " item: " + el.title + "<br />   " + " material: " + el.materialNumber + " " + el.material + "<br /><br />";
+});
+
+document.getElementById("answer5").innerHTML = materialRange;
+//
+//
+//// Answer 6
+//
+//
+var madeFilter = items.filter(function(el, idx, array){
+  return el.who_made === "i_did";
+});
+
+var madeMap = madeFilter.map(function(el, idx, array){
+  return {
+    totalItems: el.who_made.length,
+    title: el.title,
+    whoMade: el.who_made
+  };
+});
+var madeRange = "";
+madeMap.forEach(function(el,idx, array){
+  madeRange += " item: " + el.title + "<br />   " + " whomade: " + el.whoMade + "<br /><br />";
+});
+
+document.getElementById("answer6").innerHTML = "<span>number of handmade items: </span>" + madeFilter.length + "<br /><br />" + madeRange;
