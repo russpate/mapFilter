@@ -7,7 +7,7 @@ totalPrice = 0;
 items.forEach(function(el, idx, array){
   totalPrice += el.price;
 });
-var avgPrice = "The average cost is: " + "<br />   " + Math.round(totalPrice / items.length);
+var avgPrice = "The average cost is: " + "<br />" + Math.round(totalPrice / items.length);
 
 document.getElementById("answer1").innerHTML = avgPrice;
 //
@@ -26,7 +26,7 @@ var priceMap = priceFilter.map(function(el, idx, array){
 });
 var costRange = "";
 priceMap.forEach(function(el,idx, array){
-  costRange += " item: " + el.title + "<br />   " + " price: $" + el.price + "<br /><br />" ;
+  costRange += "item: " + el.title + "<br />" + "price: $" + el.price + "<br /><br />" ;
 });
 
 document.getElementById("answer2").innerHTML = costRange;
@@ -47,7 +47,7 @@ var gbpMap = gbpFilter.map(function(el, idx, array){
 });
 var gbpRange = "";
 gbpMap.forEach(function(el,idx, array){
-  gbpRange += " item: " + el.title + "<br />   " + " price: $" + el.price + " currency code: " + el.currencyCode;
+  gbpRange += "item: " + el.title + "<br />" + "price: $" + el.price + " currency code: " + el.currencyCode;
 });
 
 document.getElementById("answer3").innerHTML = gbpRange;
@@ -67,7 +67,7 @@ var woodMap = woodFilter.map(function(el, idx, array){
 });
 var woodRange = "";
 woodMap.forEach(function(el,idx, array){
-  woodRange += " item: " + el.title + "<br />   " + " material: " + el.materials + "<br /><br />";
+  woodRange += "item: " + el.title + "<br />" + "material: " + el.materials + "<br /><br />";
 });
 
 document.getElementById("answer4").innerHTML = woodRange;
@@ -89,7 +89,7 @@ var materialMap = materialFilter.map(function(el, idx, array){
 });
 var materialRange = "";
 materialMap.forEach(function(el,idx, array){
-  materialRange += " item: " + el.title + "<br />   " + " material: " + el.materialNumber + " " + el.material + "<br /><br />";
+  materialRange += "item: " + el.title + "<br />" + "material: " + el.materialNumber + " " + el.material + "<br /><br />";
 });
 
 document.getElementById("answer5").innerHTML = materialRange;
@@ -111,7 +111,7 @@ var madeMap = madeFilter.map(function(el, idx, array){
 });
 var madeRange = "";
 madeMap.forEach(function(el,idx, array){
-  madeRange += " item: " + el.title + "<br />   " + " whomade: " + el.whoMade + "<br /><br />";
+  madeRange += "item: " + el.title + "<br />" + "whomade: " + el.whoMade + "<br /><br />";
 });
 
 document.getElementById("answer6").innerHTML = "<span>number of handmade items: </span>" + madeFilter.length + "<br /><br />" + madeRange;

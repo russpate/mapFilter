@@ -1,0 +1,10 @@
+pre {
+background: #FFFCEA;
+padding: 20px;
+border: 1px solid #FBF4CE;
+color: #7D7648;
+}
+
+.question{
+  word-wrap:break-word;
+}
